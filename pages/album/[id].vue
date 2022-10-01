@@ -1,8 +1,12 @@
 <template>
-  <div>
-    <h1>アルバム詳細画面 - WE WILL!</h1>
-    <AlbumInfo  v-bind:id="id"/>
-    <SongList  v-bind:id="id"/>
+  <div class="main-contents">
+    <h1>アルバム詳細画面</h1>
+    <v-container>
+      <v-row>
+        <v-col cols="12" lg="3"><AlbumInfo v-bind:id="id"/></v-col>
+        <v-col cols="12" lg="9"><SongList v-bind:id="id"/></v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -17,5 +21,18 @@ const id = Number(route.params.id);
 </script>
 
 <style scoped>
+h1 {
+  background-color: #FFFFFF;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.main-contents {
+  width: 90%;
+  margin: 0 auto;
+}
+
 
 </style>

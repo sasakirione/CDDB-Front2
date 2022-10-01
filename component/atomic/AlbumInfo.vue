@@ -19,16 +19,19 @@ const recodeId = computed(() => currentAlbum.value?.recordNumber ?? "設定な�
   <div v-if="error">failed to load</div>
   <div v-else-if="pending">loading...</div>
   <div v-else>
-  <v-card>
+  <v-card variant="outlined" class="album-info">
     <v-card-title>{{ albumTitle }}</v-card-title>
     <v-card-item>リリース日：{{ albumReleaseDate }}</v-card-item>
     <v-card-item>ディスク枚数：{{ totalDisc }}枚</v-card-item>
     <v-card-item>レコード番号：{{ recodeId }}</v-card-item>
-    <v-card-item>ID：{{ props.id }}</v-card-item>
   </v-card>
   </div>
 </template>
 
 <style scoped>
-
+.album-info {
+  background-color: #FFFFFF;
+  padding: 15px;
+  border-radius: 20px;
+}
 </style>
