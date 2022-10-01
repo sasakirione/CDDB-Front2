@@ -1,0 +1,22 @@
+<template>
+  <v-app-bar color="light-blue lighten-3">
+    <v-toolbar-title>Octopus CDDB</v-toolbar-title>
+    <v-spacer></v-spacer>
+    <v-btn>なんかのボタンだよ</v-btn>
+  </v-app-bar>
+</template>
+
+<script setup lang="ts">
+
+</script>
+
+<style scoped>
+@font-face {
+  font-family: 'DelaGothicOne';
+  src: url(/DelaGothicOne-Regular.ttf);
+}
+
+v-toolbar-title {
+  font-family: "DelaGothicOne",serif;
+}
+</style>
