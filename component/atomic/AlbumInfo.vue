@@ -33,5 +33,6 @@ const recodeId = computed(() => currentAlbum.value?.recordNumber ?? "設定な�
   background-color: #FFFFFF;
   padding: 15px;
   border-radius: 20px;
+  box-shadow: 0 5px 10px 0 rgba(60, 194, 235, 0.5);
 }
 </style>

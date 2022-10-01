@@ -2,6 +2,8 @@
 import {computed} from "#imports";
 
 const props = defineProps<{
+  disc: string,
+  track: string,
   title: string
   artist: string,
   word: string,
@@ -9,6 +11,7 @@ const props = defineProps<{
   arranger: string
 }>()
 
+const trackNumber = computed(() => `${props.disc}.${props.track}`)
 const title = computed(() => props.title)
 const artist = computed(() => "アーティスト：" + props.artist)
 const word = computed(() => "作詞：" + props.word)
@@ -20,7 +23,7 @@ const arranger = computed(() => "編曲：" + props.arranger)
 
 <template>
   <v-list-item>
-    <v-list-item-title>{{ title }}</v-list-item-title>
+    <v-list-item-title>{{ trackNumber + ". " + title }}</v-list-item-title>
     <v-list-item-subtitle>{{ artist }}</v-list-item-subtitle>
     <v-list-item-subtitle v-show="isExistWord">{{ word }}</v-list-item-subtitle>
     <v-list-item-subtitle>{{ composer }}</v-list-item-subtitle>
