@@ -1,4 +1,11 @@
 <template>
+  <div>
+    <v-breadcrumbs
+        :items="items"
+        divider="-"
+    ></v-breadcrumbs>
+    <hr />
+  </div>
   <div class="main-contents">
     <h1>アルバム詳細画面</h1>
     <v-container>
@@ -17,6 +24,11 @@ import {useRoute} from "#app";
 
 const route = useRoute();
 const id = Number(route.params.id);
+const items = [
+  {title: "TOP", disabled: false, href: "/"},
+  {title: "アルバム検索", disabled: false, href: "/"},
+  {title: "アルバム詳細", disabled: false, href: "/"},
+]
 
 </script>
 
