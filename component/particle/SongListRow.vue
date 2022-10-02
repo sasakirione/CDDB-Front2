@@ -10,7 +10,7 @@ const trackNumber = computed(() => `${props.song.discNumber}.${props.song.trackN
 const title = computed(() => props.song.title)
 const artist = computed(() => "アーティスト：" + props.song.artist)
 const word = computed(() => "作詞：" + props.song.word?.map((w) => w.name).join(", ") ?? "設定なし")
-const isExistWord = computed(() => word.value != "作詞：設定なし")
+const isExistWord = computed(() => word.value != "作詞：")
 const composer = computed(() => "作曲：" + props.song.composer?.map((c) => c.name).join(", ") ?? "設定なし")
 const arranger = computed(() => "編曲：" + props.song.arranger?.map((a) => a.name).join(", ") ?? "設定なし")
 </script>

@@ -26,7 +26,7 @@ const route = useRoute();
 const id = Number(route.params.id);
 const items = [
   {title: "TOP", disabled: false, href: "/"},
-  {title: "アルバム検索", disabled: false, href: "/"},
+  {title: "アルバム検索", disabled: false, href: "/album"},
   {title: "アルバム詳細", disabled: true, href: "/"},
 ]
 

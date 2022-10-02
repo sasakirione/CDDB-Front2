@@ -8,7 +8,7 @@ const props = defineProps<{
 }>()
 
 const url = `${import.meta.env.VITE_BASE_URL ?? "http://localhost:8080"}/v1/albums/${props.id}/songs`
-const { data: currentAlbum , pending, error, refresh } = await useFetch<albumSongs[]>(url)
+const { data: currentAlbum , pending, error } = await useFetch<albumSongs[]>(url)
 
 </script>
 
