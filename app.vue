@@ -11,6 +11,7 @@
 <script>
 import Header from "./component/molecule/Header";
 import Footer from "./component/molecule/Footer";
+import "/assets/css/style.css";
 
 export default {
   components: {Footer, Header}
