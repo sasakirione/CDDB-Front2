@@ -22,5 +22,4 @@ export default {
 .all-contents {
   background: linear-gradient(to right, #FFE5AE, #FFFFFF);
 }
-
 </style>

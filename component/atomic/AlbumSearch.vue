@@ -1,7 +1,15 @@
 <script setup lang="ts">
 import {ref} from "#imports";
 
+interface Emits {
+  (event: "searchAlbum", text: string): void
+}
+
 const search = ref("")
+const emit = defineEmits<Emits>()
+const onSearch = () => {
+  emit("searchAlbum", search.value)
+}
 </script>
 
 <template>
@@ -12,7 +20,7 @@ const search = ref("")
           label="アルバム名"
           append-icon="mdi-magnify"
       ></v-text-field>
-      <v-btn>検索</v-btn>
+      <v-btn @click="onSearch">検索</v-btn>
       <v-btn>詳細検索画面を開く</v-btn>
     </v-card-title>
   </v-card>

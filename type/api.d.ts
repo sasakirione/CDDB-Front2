@@ -41,3 +41,8 @@ export type albumDisc = {
     discTitle: string
     cddbId: string
 }
+
+export type albumListRow = {
+    first: number,
+    second: string
+}
