@@ -17,7 +17,7 @@ const searchSong = async (type: string, text: string) => {
   if (type == null) {
     return
   }
-  const url = `${import.meta.env.VITE_BASE_URL ?? "http://localhost:8080"}/v1/songs/${getSearchType(type)}/${text}`
+  const url = `${import.meta.env.VITE_BASE_URL ?? "http://localhost:8080"}/v1/original-song/${getSearchType(type)}/${text}`
   const { data } = await useAsyncData<songListRowSimple[]>(() => $fetch(url), {initialCache: false})
   if (data == null) {
     console.log("failed to load")
@@ -29,9 +29,9 @@ const searchSong = async (type: string, text: string) => {
 }
 const getSearchType = (type: string) => {
   switch (type) {
-    case "タイトル":
+    case "曲名":
       return "title"
-    case "アーティスト":
+    case "アーティスト名":
       return "artist"
   }
 }
