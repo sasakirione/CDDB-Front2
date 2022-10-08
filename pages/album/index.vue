@@ -4,7 +4,7 @@ import AlbumSearch from "/component/atomic/AlbumSearch";
 import {useAsyncData} from "#app";
 import {albumListRow} from "~/type/api";
 import {ref} from "#imports";
-import {cors} from "~/plugins/util";
+import {cors} from "~/util/api";
 
 const items = [
   {title: "TOP", disabled: false, href: "/"},
