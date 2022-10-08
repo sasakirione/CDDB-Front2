@@ -11,6 +11,7 @@
 <script>
 import Header from "./component/molecule/Header";
 import Footer from "./component/molecule/Footer";
+import "/assets/css/style.css";
 
 export default {
   components: {Footer, Header}
@@ -21,5 +22,4 @@ export default {
 .all-contents {
   background: linear-gradient(to right, #FFE5AE, #FFFFFF);
 }
-
 </style>

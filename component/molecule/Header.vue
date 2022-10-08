@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar color="light-blue lighten-3">
+  <v-app-bar color="light-blue-lighten-4">
     <v-toolbar-title>Octopus CDDB</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-btn>なんかのボタンだよ</v-btn>
@@ -16,7 +16,7 @@
   src: url(/DelaGothicOne-Regular.ttf);
 }
 
-v-toolbar-title {
+.v-toolbar-title {
   font-family: "DelaGothicOne",serif;
 }
 </style>

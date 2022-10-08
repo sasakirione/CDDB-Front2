@@ -5,7 +5,7 @@
 <template>
   <div class="footer">
   <v-footer
-    color="light-blue lighten-3"
+    color="light-blue-lighten-4"
   >
     <v-row
       align="center"
