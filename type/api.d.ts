@@ -46,3 +46,9 @@ export type albumListRow = {
     first: number,
     second: string
 }
+
+export type songListRowSimple = {
+    title: string,
+    artist: string,
+    id: number
+}

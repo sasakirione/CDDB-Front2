@@ -14,7 +14,6 @@ const isResult = ref(false)
 const albumList = ref<albumListRow[]>([])
 
 const searchAlbum = async (text: String) => {
-  albumList.value = []
   const url = `${import.meta.env.VITE_BASE_URL ?? "http://localhost:8080"}/v1/albums/search/${text}`
   const { data } = await useAsyncData<albumListRow[]>(() => $fetch(url), {initialCache: false})
   if (data == null) {
