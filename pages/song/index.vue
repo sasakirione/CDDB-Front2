@@ -4,6 +4,7 @@ import SongSearch from "~/component/atomic/SongSearch.vue";
 import SongListSimple from "~/component/molecule/SongListSimple.vue";
 import {songListRowSimple} from "~/type/api";
 import {useAsyncData} from "#app";
+import {cors} from "~/plugins/util";
 
 const items = [
   {title: "TOP", disabled: false, href: "/"},
@@ -18,7 +19,7 @@ const searchSong = async (type: string, text: string) => {
     return
   }
   const url = `${import.meta.env.VITE_BASE_URL ?? "http://localhost:8080"}/v1/original-song/${getSearchType(type)}/${text}`
-  const { data } = await useAsyncData<songListRowSimple[]>(() => $fetch(url, {mode: "cors"}), {initialCache: false})
+  const { data } = await useAsyncData<songListRowSimple[]>(() => $fetch(url, cors), {initialCache: false})
   if (data == null) {
     console.log("failed to load")
   } else {
