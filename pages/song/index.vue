@@ -4,7 +4,7 @@ import SongSearch from "~/component/atomic/SongSearch.vue";
 import SongListSimple from "~/component/molecule/SongListSimple.vue";
 import {songListRowSimple} from "~/type/api";
 import {useAsyncData} from "#app";
-import {cors} from "~/plugins/util";
+import {cors} from "~/util/api";
 
 const items = [
   {title: "TOP", disabled: false, href: "/"},

@@ -4,3 +4,5 @@ export const cors = {
         "Access-Control-Allow-Methods": "*"
     }
 }
+
+export const aaa = ""
