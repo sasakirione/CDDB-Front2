@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import AlbumList from "/component/molecule/AlbumList";
 import AlbumSearch from "/component/atomic/AlbumSearch";
-import {useFetch} from "#app";
+import {useAsyncData} from "#app";
 import {albumListRow} from "~/type/api";
 import {ref} from "#imports";
 
@@ -14,9 +14,9 @@ const isResult = ref(false)
 const albumList = ref<albumListRow[]>([])
 
 const searchAlbum = async (text: String) => {
-  console.log(text)
+  albumList.value = []
   const url = `${import.meta.env.VITE_BASE_URL ?? "http://localhost:8080"}/v1/albums/search/${text}`
-  const { data } = await useFetch<albumListRow[]>(url)
+  const { data } = await useAsyncData<albumListRow[]>(() => $fetch(url), {initialCache: false})
   if (data == null) {
     console.log("failed to load")
   } else {
