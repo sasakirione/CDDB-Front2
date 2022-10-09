@@ -20,7 +20,7 @@ const searchSong = async (type: string, text: string) => {
   }
   const url = `${import.meta.env.VITE_BASE_URL ?? "http://localhost:8080"}/v1/original-song/${getSearchType(type)}/${text}`
   const { data } = await useAsyncData<songListRowSimple[]>(() => $fetch(url, cors), {initialCache: false})
-  if (data == null) {
+  if (data.value == null) {
     console.log("failed to load")
   } else {
     songList.value = data.value
