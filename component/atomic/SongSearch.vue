@@ -27,7 +27,7 @@ const onSearch = () => {
       </v-select>
       <v-text-field
           v-model="searchText"
-          label="アルバム名"
+          :label="searchType"
           append-icon="mdi-magnify"
       ></v-text-field>
       <v-btn @click="onSearch">検索</v-btn>
