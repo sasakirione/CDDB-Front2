@@ -7,5 +7,16 @@ export default defineNuxtConfig({
         define: {
             "process.env.DEBUG": false,
         },
+    },
+    app:{
+        head: {
+            title: "Octopus CDDB",
+            meta: [
+                { charset: "utf-8" },
+            ],
+            link: [
+                { rel: "icon", type: "image/png", href: "/favicon.png" },
+            ],
+        },
     }
 })
